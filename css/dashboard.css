@@ -1,0 +1,184 @@
+/* Dashboard Header */
+.dashboard-title {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+/* Stats Cards */
+.stats-card {
+    background: var(--white);
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 20px;
+    height: 100%;
+    transition: transform var(--transition-speed);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stats-card:nth-child(1) .card-body {
+    background: var(--primary);
+    color: var(--background);
+}
+
+.stats-card:nth-child(2) .card-body {
+    background: var(--secondary);
+    color: var(--background);
+}
+
+.stats-card:nth-child(3) .card-body {
+    background: var(--tertiary);
+    color: var(--primary);
+}
+
+.stats-card .card-body {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.stats-card .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.stats-card .card-title i {
+    margin-right: 10px;
+    font-size: 1.4rem;
+}
+
+.stats-card .card-text {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Chart Cards */
+.card {
+    background: var(--white);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+.card-header {
+    background: var(--tertiary) !important;
+    padding: 15px 20px;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.card-header h5 {
+    color: var(--primary);
+    font-weight: 600;
+    margin: 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Table Styles */
+.table thead th {
+    background: var(--tertiary);
+    color: var(--primary);
+    font-weight: 600;
+    padding: 15px;
+    border: none;
+}
+
+.table td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background: rgba(223, 242, 235, 0.5);
+}
+
+/* Status Badges */
+.badge {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.status-present {
+    background: var(--primary);
+    color: var(--background);
+}
+
+.status-absent {
+    background: var(--secondary);
+    color: var(--background);
+}
+
+.status-late {
+    background: var(--tertiary);
+    color: var(--primary);
+}
+
+/* Buttons */
+.btn-custom {
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: all var(--transition-speed);
+    font-weight: 500;
+}
+
+.btn-outline-custom {
+    border: 1px solid var(--secondary);
+    color: var(--primary);
+    background: transparent;
+}
+
+.btn-outline-custom:hover {
+    background: var(--secondary);
+    color: var(--background);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .stats-card .card-text {
+        font-size: 1.5rem;
+    }
+    
+    .dashboard-title {
+        font-size: 1.5rem;
+    }
+    
+    .card-header {
+        padding: 12px 15px;
+    }
+    
+    .table td, .table th {
+        padding: 12px;
+    }
+}
