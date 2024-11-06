@@ -5,6 +5,7 @@
     --tertiary: #B9E5E8;
     --background: #DFF2EB;
     --white: #FFFFFF;
+    --danger: #dc3545;
     --sidebar-width: 250px;
     --transition-speed: 0.3s;
 }
@@ -88,7 +89,7 @@ body {
     margin-left: var(--sidebar-width);
 }
 
-/* Navbar */
+/* Navbar and Dropdown */
 .navbar {
     background: var(--tertiary) !important;
     padding: 15px;
@@ -110,9 +111,88 @@ body {
     background: var(--secondary);
 }
 
-/* Utility Classes */
-.shadow-sm { box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
-.shadow-md { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+.admin-dropdown {
+    color: var(--primary);
+    text-decoration: none;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    border: none;
+}
+
+.admin-dropdown:hover, 
+.admin-dropdown:focus {
+    color: var(--secondary);
+}
+
+.admin-dropdown i {
+    font-size: 1.2rem;
+}
+
+.admin-dropdown::after {
+    margin-left: 10px;
+}
+
+.dropdown-menu {
+    background: var(--white);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    min-width: 200px;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    transition: all var(--transition-speed);
+}
+
+.dropdown-item i {
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+.dropdown-item:hover {
+    background: var(--background);
+    color: var(--primary);
+}
+
+.dropdown-item.text-danger {
+    color: var(--danger) !important;
+}
+
+.dropdown-item.text-danger:hover {
+    background: #fde8e8;
+}
+
+.dropdown-divider {
+    border-color: var(--background);
+    margin: 8px 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -131,5 +211,17 @@ body {
     
     #content.active {
         margin-left: var(--sidebar-width);
+    }
+
+    .admin-dropdown span {
+        display: none;
+    }
+    
+    .admin-dropdown::after {
+        margin-left: 5px;
+    }
+    
+    .dropdown-menu {
+        min-width: 180px;
     }
 }
